@@ -4,12 +4,16 @@ using generateFeedTextFromExcel.Feed;
 using Excel = OfficeOpenXml;
 using OfficeOpenXml.Style;
 
+using System.Text;
+
 namespace generateFeedTextFromExcel
 {
     class MainClass
     {
         public static void Main(string[] args)
         {
+
+            Encoding utf8 = Encoding.GetEncoding("UTF-8");
 
             string filePath = args[0];
             string feedType = args[1];
@@ -20,8 +24,10 @@ namespace generateFeedTextFromExcel
             int pidCol = 1;
             int titleCol = 2;
 
+            StreamWriter w = null;
             try{
-                
+
+                w = new StreamWriter(@"./pla.txt", true, utf8);
                 //ファイルパスのチェック
                 if(!File.Exists(filePath)) {
                     Console.WriteLine("指定されたファイルが存在しません。");
@@ -47,12 +53,14 @@ namespace generateFeedTextFromExcel
                     {
                         break;
                     }
-                    Console.WriteLine(string.Format(Pla.outputFormat, pla.Pid.Replace("c", ""), pla.Title));
+                    w.WriteLine(string.Format(Pla.outputFormat, pla.Pid.Replace("c", ""), pla.Title));
                     getRow = getRow + 1;
                 }
 
-            }catch (Exception e) {
+            } catch (Exception e) {
                 Console.WriteLine(e.Message);
+            } finally {
+                w.Close();
             }
         }
     }
