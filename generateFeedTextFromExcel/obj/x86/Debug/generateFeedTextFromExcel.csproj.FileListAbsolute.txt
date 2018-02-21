@@ -1,0 +1,7 @@
+/Users/h-899/Projects/generateFeedTextFromExcel/generateFeedTextFromExcel/obj/x86/Debug/generateFeedTextFromExcel.csproj.CoreCompileInputs.cache
+/Users/h-899/Projects/generateFeedTextFromExcel/generateFeedTextFromExcel/bin/Debug/generateFeedTextFromExcel.exe
+/Users/h-899/Projects/generateFeedTextFromExcel/generateFeedTextFromExcel/bin/Debug/generateFeedTextFromExcel.pdb
+/Users/h-899/Projects/generateFeedTextFromExcel/generateFeedTextFromExcel/obj/x86/Debug/generateFeedTextFromExcel.exe
+/Users/h-899/Projects/generateFeedTextFromExcel/generateFeedTextFromExcel/obj/x86/Debug/generateFeedTextFromExcel.pdb
+/Users/h-899/Projects/generateFeedTextFromExcel/generateFeedTextFromExcel/bin/Debug/EPPlus.dll
+/Users/h-899/Projects/generateFeedTextFromExcel/generateFeedTextFromExcel/bin/Debug/EPPlus.xml

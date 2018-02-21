@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{BB987EC7-7350-4D63-8C8D-63D1A06E0F3C}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="generateFeedTextFromExcel/Properties/AssemblyInfo.cs">
+    <Files>
+      <File FileName="generateFeedTextFromExcel/Program.cs" Line="43" Column="16" />
+      <File FileName="generateFeedTextFromExcel/Feed/Pla.cs" Line="8" Column="42" />
+      <File FileName="generateFeedTextFromExcel/packages.config" Line="1" Column="1" />
+      <File FileName="generateFeedTextFromExcel/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.generateFeedTextFromExcel PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
