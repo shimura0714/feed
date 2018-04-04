@@ -20,10 +20,6 @@ namespace generateFeedTextFromExcel
             Console.WriteLine(filePath);
             Console.WriteLine(feedType);
 
-            int startRow = 2;
-            int pidCol = 1;
-            int titleCol = 2;
-
             StreamWriter w = null;
             try{
 
@@ -45,15 +41,23 @@ namespace generateFeedTextFromExcel
                 int getRow = 0;
                 while (true)
                 {
-                    string pid = ws.Cells[startRow + getRow, pidCol].Text;
-                    string title = ws.Cells[startRow + getRow, titleCol].Text;
-                    Feed.Pla pla = new Feed.Pla(pid, title);
+                    Feed.Feed f = null;
 
-                    if (pla.Title.Equals(""))
+                    switch(feedType) {
+                      case Feed.Pla.PLA:
+                        f = new Feed.Pla();
+                        break;
+                    }
+                    string pid = ws.Cells[f.StartRow + getRow, f.PidCol].Text;
+                    string title = ws.Cells[f.StartRow + getRow, f.TitleCol].Text;
+
+                    if (title.Equals(""))
                     {
                         break;
                     }
-                    w.WriteLine(string.Format(Pla.outputFormat, pla.Pid.Replace("c", ""), pla.Title));
+                    f.Pid = pid;
+                    f.Title = title;
+                    w.WriteLine(string.Format(f.OutputFormat, f.Pid, f.Title));
                     getRow = getRow + 1;
                 }
 
